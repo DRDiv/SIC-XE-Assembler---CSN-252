@@ -1,0 +1,10 @@
+HEAD    START   0
+FIRST   LDT     #11
+        LDX     #0
+MOVECH  LDC     STRX,X 
+        STCH    STRX,X 
+        TIXR    T 
+        JL      MOVECH
+STRX    BYTE    C'TEST STRING'        
+STRY    RESB    11
+        END     FIRST
